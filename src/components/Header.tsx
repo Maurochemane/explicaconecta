@@ -216,7 +216,7 @@ const Header = () => {
               </Link>
 
               <Link
-                to="/cadastro-explicadores"
+                to="/solicitar-explicador"
                 onClick={() => setIsMenuOpen(false)}
               >
                 <Button className="text-secondary w-full flex items-center justify-center gap-2">
