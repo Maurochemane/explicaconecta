@@ -20,7 +20,7 @@ const Header = () => {
   const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 right-0 bg-blue-50 shadow-xl z-50">
       <div className="container mx-auto py-4 px-4 md:px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}

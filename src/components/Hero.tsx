@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24  bg-(image: src=https://images.unsplash.com/photo-1488590528505-98d2b5aba04b) max-w-xs:bg-gradient-to-br from-white to-blue-50"
+      className=" bg-blue-50 pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -48,10 +48,10 @@ const Hero = () => {
                 }`}
                 style={{ transitionDelay: "400ms" }}
               >
-                <Button className="btn-primary flex items-center gap-2">
+                {/*<Button className="btn-primary flex items-center gap-2">
                   Começa Agora
                   <ArrowRight className="h-4 w-4" />
-                </Button>
+                </Button>*/}
                 <Button className="btn-secondary">
                   Encontre um Explicador
                 </Button>
@@ -65,7 +65,7 @@ const Hero = () => {
                 ? "translate-x-0 opacity-100"
                 : "translate-x-20 opacity-0"
             }`}
-            style={{ transitionDelay: "600ms" }}
+            style={{ transitionDelay: "3ms" }}
           >
             <div className="relative">
               <div
@@ -74,17 +74,17 @@ const Hero = () => {
                 }`}
               ></div>
               <div
-                className={`absolute -bottom-8 -left-8 w-64 h-64 bg-primary/20 rounded-full blur-3xl transition-all duration-1000 delay-1000 ${
+                className={`absolute -bottom-8 -left-8 w-64 h-90 bg-primary/20 rounded-full blur-3xl transition-all duration-1000 delay-1000 ${
                   isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
                 }`}
               ></div>
-              <div className="relative bg-white p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
+              <div className="relative bg-gray-50 p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  src="./public/ft.jpg"
                   alt="Estudante aprendendo online"
                   className="w-full h-auto rounded-md object-cover"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-secondary/70 to-transparent p-6">
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/70 to-transparent p-6">
                   <p className="text-white text-lg font-medium">
                     Aprenda com os melhores explicadores de Moçambique
                   </p>
