@@ -48,7 +48,7 @@ const Header = () => {
               Sobre
             </Link>
             <Link
-              to="/#DicasEstudo"
+              to="/dicas-estudo"
               className="relative group font-medium text-blue-900"
             >
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>

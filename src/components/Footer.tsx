@@ -5,18 +5,19 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white pt-16 pb-8">
+    <footer className="bg-gray-900 text-white pt-16 pb-8 mx-auto">
       <div
         className="container mx-auto px-4 md:px-8"
         data-aos="fade-up"
         data-aos-duration="1000"
       >
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12  ">
           {/* Logo and About */}
           <div>
             <div className="flex items-center mb-4">
-              <Book className="w-8 h-8 text-secondary mr-2" />
-              <span className="text-xl font-bold">Explica Conecta</span>
+              <span className="text-xl text-primary font-bold">
+                explica.<span className="text-secondary">Conecta</span>
+              </span>
             </div>
             <p className="text-gray-400 mb-6">
               Centro de explicações a domicílio em Maputo e Matola, dedicado a
@@ -24,14 +25,15 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
+          {/* Quick Links 
+          /*
           <div>
-            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
-            <ul className="space-y-2">
+            <h3 className="text-white font-semibold mb-4">Links Rápidos</h3>
+            <ul className="space-y-2 br-2 decoration-solid max-sm:flex justify-center items-center gap-3">
               <li>
                 <a
                   href="#home"
-                  className="text-gray-400 hover:text-secondary flex items-center"
+                  className="text-gray-400 hover:text-secondary flex items-center "
                 >
                   <ChevronRight className="w-4 h-4 mr-1" />
                   Início
@@ -65,11 +67,11 @@ const Footer = () => {
                 </a>
               </li>
             </ul>
-          </div>
+          </div>*/}
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Serviços</h3>
+            <h3 className="text-white font-semibold mb-4">Serviços</h3>
             <ul className="space-y-2">
               <li>
                 <a
@@ -109,17 +111,16 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-
           {/* Contact */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contacte-nos</h3>
+            <h3 className="text-white font-semibold mb-4">Contacte-nos</h3>
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <span className="font-medium w-24">WhatsApp:</span>
                 <span>+258 865968106</span>
               </li>
               <li className="flex items-start">
-                <span className="font-medium w-24">Email:</span>
+                <span className="font-medium w-24 overflow-x-auto">Email:</span>
                 <a
                   href="mailto:info@explicaconecta.com"
                   className="hover:text-secondary"

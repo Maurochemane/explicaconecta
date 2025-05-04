@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { Mail, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -15,7 +14,9 @@ const Contact = () => {
     message: "",
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
@@ -26,13 +27,13 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log("Form submitted:", formData);
-    
+
     // Show success message
     toast({
       title: "Mensagem enviada!",
       description: "Entraremos em contacto em breve.",
     });
-    
+
     // Reset form
     setFormData({
       name: "",
@@ -47,15 +48,22 @@ const Contact = () => {
       <div className="container mx-auto">
         <h2 className="section-title">Entre em Contacto</h2>
         <p className="section-subtitle">
-          Estamos prontos para responder a todas as suas perguntas e ajudá-lo a começar sua jornada educacional.
+          Estamos prontos para responder a todas as suas perguntas e ajudá-lo a
+          começar sua jornada educacional.
         </p>
 
         <div className="flex flex-col lg:flex-row gap-12 mt-12">
           <div className="lg:w-1/2">
-            <form onSubmit={handleSubmit} className="bg-gray-50 p-8 rounded-2xl shadow-sm">
+            <form
+              onSubmit={handleSubmit}
+              className="bg-gray-50 p-8 rounded-2xl shadow-sm"
+            >
               <div className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Nome Completo
                   </label>
                   <Input
@@ -70,7 +78,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Email
                   </label>
                   <Input
@@ -86,7 +97,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Telefone
                   </label>
                   <Input
@@ -101,7 +115,10 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium mb-1">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium mb-1"
+                  >
                     Mensagem
                   </label>
                   <Textarea
@@ -114,7 +131,7 @@ const Contact = () => {
                     className="w-full min-h-[120px]"
                   />
                 </div>
-                
+
                 <Button type="submit" className="btn-primary w-full">
                   Enviar Mensagem
                 </Button>
@@ -123,9 +140,11 @@ const Contact = () => {
           </div>
 
           <div className="lg:w-1/2">
-            <div className="bg-primary/5 p-8 rounded-2xl h-full">
-              <h3 className="text-2xl font-semibold mb-6 text-primary">Informações de Contacto</h3>
-              
+            <div className="bg-primary/5 p-2 rounded-2xl h-full md:p-8">
+              <h3 className="text-2xl font-semibold mb-6 text-primary">
+                Informações de Contacto
+              </h3>
+
               <div className="space-y-8">
                 <div className="flex gap-4">
                   <div className="bg-white p-3 rounded-full shadow-sm">
@@ -138,39 +157,84 @@ const Contact = () => {
                   </div>
                 </div>
 
-                <div className="flex gap-4">
+                <div className="flex gap-4 overflow-x-hidden">
                   <div className="bg-white p-3 rounded-full shadow-sm">
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-lg mb-2">Email</h4>
-                    <p className="text-gray-600">info@explicaconecta.com</p>
-                    <p className="text-gray-600">infoexplicaconecta@hotlook.com</p>
+                    <h4 className="font-medium text-lg mb-2 ">Email</h4>
+                    <p className=" text-gray-600 text-xs  md:text-lg ">
+                      info@explicaconecta.com
+                    </p>
+                    <p className="text-gray-600 text-xs md:text-lg">
+                      infoexplicaconecta@hotlook.com
+                    </p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-lg mb-2">Horário de Atendimento</h4>
+                  <h4 className="font-medium text-lg mb-2">
+                    Horário de Atendimento
+                  </h4>
                   <p className="text-gray-600">Segunda a Sábado: 8h às 20h</p>
                   <p className="text-gray-600">Domingo: Fechado</p>
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-lg mb-2">Área de Cobertura</h4>
-                  <p className="text-gray-600">Oferecemos serviços em toda a região de Maputo e Matola.</p>
+                  <h4 className="font-medium text-lg mb-2">
+                    Área de Cobertura
+                  </h4>
+                  <p className="text-gray-600">
+                    Oferecemos serviços em toda a região de Maputo e Matola.
+                  </p>
                 </div>
 
                 <div>
                   <h4 className="font-medium text-lg mb-2">Siga-nos</h4>
                   <div className="flex space-x-4 mt-2">
-                    <a href="#" className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
+                    <a
+                      href="#"
+                      className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-primary"
+                      >
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                       </svg>
                     </a>
-                    <a href="#" className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-primary">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <a
+                      href="#"
+                      className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="text-primary"
+                      >
+                        <rect
+                          x="2"
+                          y="2"
+                          width="20"
+                          height="20"
+                          rx="5"
+                          ry="5"
+                        ></rect>
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                       </svg>
