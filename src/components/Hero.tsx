@@ -86,7 +86,7 @@ const Hero = () => {
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/70 to-transparent p-6">
                   <p className="text-white text-lg font-medium">
-                    Aprenda com os melhores explicadores de Moçambique
+                    Aprenda com os melhores explicadores
                   </p>
                 </div>
               </div>
