@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24  bg-(image: src=https://images.unsplash.com/photo-1488590528505-98d2b5aba04b) max-w-xs:bg-gradient-to-br from-white to-blue-50"
+      className="pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24  bg-[url(./public/estudo.jpg)] bg-cover max-w-xs:bg-gradient-to-br from-white to-blue-50"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -80,7 +80,7 @@ const Hero = () => {
               ></div>
               <div className="relative bg-white p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+                  src="./public/estudo.jpg"
                   alt="Estudante aprendendo online"
                   className="w-full h-auto rounded-md object-cover"
                 />
