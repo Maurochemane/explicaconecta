@@ -219,7 +219,7 @@ const Header = () => {
                 to="/solicitar-explicador"
                 onClick={() => setIsMenuOpen(false)}
               >
-                <Button className="text-secondary w-full flex items-center justify-center gap-2">
+                <Button className="md: text-secondary w-full flex items-center justify-center gap-2">
                   <UserPlus className="h-4 w-4" />
                   Inscreva-se
                 </Button>

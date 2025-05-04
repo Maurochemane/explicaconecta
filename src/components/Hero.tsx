@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24 bg-gradient-to-br from-white to-blue-50"
+      className="pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24  bg-(image: src=https://images.unsplash.com/photo-1488590528505-98d2b5aba04b) max-w-xs:bg-gradient-to-br from-white to-blue-50"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
@@ -30,7 +30,7 @@ const Hero = () => {
                 <span className="text-primary">conectado a quem sabe.</span>
               </h1>
               <p
-                className={`text-lg md:text-xl mb-8 text-gray-600 max-w-md transition-all duration-700 delay-300 transform ${
+                className={`text-lg md:text-xl mb-8 text-blue-950 max-w-md transition-all duration-700 delay-300 transform ${
                   isLoaded
                     ? "translate-y-0 opacity-100"
                     : "translate-y-10 opacity-0"
@@ -78,11 +78,11 @@ const Hero = () => {
                   isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
                 }`}
               ></div>
-              <div className="relative bg-white p-4 rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+              <div className="relative bg-white p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
                   src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
                   alt="Estudante aprendendo online"
-                  className="w-full h-auto rounded-xl object-cover"
+                  className="w-full h-auto rounded-md object-cover"
                 />
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-secondary/70 to-transparent p-6">
                   <p className="text-white text-lg font-medium">

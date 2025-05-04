@@ -12,6 +12,7 @@ import { Book, BookOpen, Clock, ListCheck, PenLine } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
+
 const DicasEstudo = () => {
   const [isLoaded, setIsLoaded] = useState(false);
 

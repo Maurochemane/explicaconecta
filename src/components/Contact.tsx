@@ -44,10 +44,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white">
+    <section id="contact" className="section-padding bg-white ">
       <div className="container mx-auto">
-        <h2 className="section-title">Entre em Contacto</h2>
-        <p className="section-subtitle">
+        <h2 className="section-title text-primary">Entre em Contacto</h2>
+        <p className="section-subtitle text-blue-950">
           Estamos prontos para responder a todas as suas perguntas e ajudá-lo a
           começar sua jornada educacional.
         </p>
@@ -62,7 +62,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium mb-1"
+                    className="block text-sm font-medium mb-1 text-blue-950"
                   >
                     Nome Completo
                   </label>
@@ -80,7 +80,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium mb-1"
+                    className="block text-sm font-medium mb-1 text-blue-950"
                   >
                     Email
                   </label>
@@ -99,7 +99,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="phone"
-                    className="block text-sm font-medium mb-1"
+                    className="block text-sm font-medium mb-1 text-blue-950"
                   >
                     Telefone
                   </label>
@@ -117,7 +117,7 @@ const Contact = () => {
                 <div>
                   <label
                     htmlFor="message"
-                    className="block text-sm font-medium mb-1"
+                    className="block text-sm font-medium mb-1 text-blue-950"
                   >
                     Mensagem
                   </label>
@@ -151,7 +151,9 @@ const Contact = () => {
                     <Phone className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-lg mb-2">Telefone</h4>
+                    <h4 className="font-medium text-lg mb-2 text-blue-950">
+                      Telefone
+                    </h4>
                     <p className="text-gray-600">+258 849646536</p>
                     <p className="text-gray-600">+258 865968106</p>
                   </div>
@@ -162,18 +164,17 @@ const Contact = () => {
                     <Mail className="h-6 w-6 text-primary" />
                   </div>
                   <div>
-                    <h4 className="font-medium text-lg mb-2 ">Email</h4>
-                    <p className=" text-gray-600 text-xs  md:text-lg ">
+                    <h4 className="font-medium text-lg mb-2 text-blue-950">
+                      Email
+                    </h4>
+                    <p className=" text-gray-600 text-lg  md:text-lg ">
                       info@explicaconecta.com
-                    </p>
-                    <p className="text-gray-600 text-xs md:text-lg">
-                      infoexplicaconecta@hotlook.com
                     </p>
                   </div>
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-lg mb-2">
+                  <h4 className="font-medium text-lg mb-2 text-blue-950">
                     Horário de Atendimento
                   </h4>
                   <p className="text-gray-600">Segunda a Sábado: 8h às 20h</p>
@@ -181,7 +182,7 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-lg mb-2">
+                  <h4 className="font-medium text-lg mb-2 text-blue-950">
                     Área de Cobertura
                   </h4>
                   <p className="text-gray-600">
@@ -190,10 +191,12 @@ const Contact = () => {
                 </div>
 
                 <div>
-                  <h4 className="font-medium text-lg mb-2">Siga-nos</h4>
+                  <h4 className="font-medium text-lg mb-2 text-blue-950">
+                    Siga-nos
+                  </h4>
                   <div className="flex space-x-4 mt-2">
                     <a
-                      href="#"
+                      href="fb.com/explicaconecta"
                       className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
                     >
                       <svg
@@ -212,7 +215,7 @@ const Contact = () => {
                       </svg>
                     </a>
                     <a
-                      href="#"
+                      href="instagram.com/explica_conecta"
                       className="bg-white p-2 rounded-full shadow-sm hover:bg-gray-100 transition-colors"
                     >
                       <svg
