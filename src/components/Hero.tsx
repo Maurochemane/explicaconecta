@@ -80,7 +80,7 @@ const Hero = () => {
               ></div>
               <div className="relative bg-gray-50 p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
-                  src="./public/ft.jpg"
+                  src="/public/ft.jpg"
                   alt="Estudante aprendendo online"
                   className="w-full h-auto rounded-md object-cover"
                 />

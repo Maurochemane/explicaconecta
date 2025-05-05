@@ -89,7 +89,7 @@ const About = () => {
               <div className="absolute -top-4 -left-4 w-40 h-40 bg-secondary/30 rounded-full"></div>
               <div className="absolute -bottom-6 -right-6 w-60 h-60 bg-primary/20 rounded-full"></div>
               <img
-                src="./public/estudo.jpg"
+                src="/public/estudo.jpg"
                 alt="Explica Conecta - Educação personalizada"
                 className="w-full h-auto rounded-2xl shadow-lg relative z-10"
               />
