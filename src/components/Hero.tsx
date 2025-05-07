@@ -14,7 +14,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className=" bg-blue-50 pt-28 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
+      className=" bg-blue-50 pt-28 pb-8 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
