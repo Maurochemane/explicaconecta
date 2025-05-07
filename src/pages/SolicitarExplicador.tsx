@@ -18,13 +18,13 @@ const SolicitarExplicador = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-10">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h1 className="text-3xl font-bold text-primary mb-4">Solicita um Explicador da Explica Conecta</h1>
-              <p className="text-gray-600 mb-6">
-                Preencha o formulário abaixo para solicitar um explicador personalizado que atenda às suas necessidades específicas.
+            <div className="text-center mb-4">
+              <h1 className="text-3xl font-bold text-primary mb-6">Solicita um Explicador</h1>
+              <p className="text-gray-600 mb-4">
+                Preencha o formulário abaixo para solicitar um explicador personalizado <br />que atenda às suas necessidades específicas.
               </p>
             </div>
 

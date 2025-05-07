@@ -59,13 +59,13 @@ const SolicitarPropostaEmpresas = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-10">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-3xl mx-auto">
-            <div className="text-center mb-10">
-              <h1 className="text-3xl font-bold text-primary mb-4">Solicitar Proposta para Empresas</h1>
-              <p className="text-gray-600 mb-6">
-                Capacite sua equipe com os melhores profissionais da Explica Conecta. Preencha o formulário abaixo para receber uma proposta personalizada.
+            <div className="text-center mb-4">
+              <h1 className="text-3xl font-bold text-primary mb-6">Solicite uma Proposta para a sua Empresa</h1>
+              <p className="text-gray-600 mb-4">
+                Capacite sua equipe com os melhores profissionais da Explica Conecta.<br></br> Preencha o formulário abaixo para receber uma proposta personalizada.
               </p>
             </div>
 
