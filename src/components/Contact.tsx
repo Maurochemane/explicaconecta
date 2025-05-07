@@ -131,9 +131,10 @@ const Contact = () => {
                     className="w-full min-h-[120px]"
                   />
                 </div>
-
+                
                 <Button type="submit" className="btn-primary w-full">
                   Enviar Mensagem
+                <link rel="info@explicaconecta.com" href="info@explicaconecta.com" />
                 </Button>
               </div>
             </form>

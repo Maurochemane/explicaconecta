@@ -60,11 +60,13 @@ const Services = () => {
                   </li>
                 </ul>
               </CardContent>
+                <Link to="/solicitar-explicador">
               <CardFooter>
-                <Button className="w-full hover:scale-90 transition-all">
-                  Solicitar Explicador
-                </Button>
+                  <Button className="w-full hover:scale-90 transition-all">
+                    Solicitar Explicador
+                  </Button>
               </CardFooter>
+                </Link>
             </Card>
 
             <Card className="bg-white shadow-lg hover:shadow-primary transition-shadow duration-300 border-t-4 border-t-primary">
@@ -102,11 +104,13 @@ const Services = () => {
                   </li>
                 </ul>
               </CardContent>
+              <Link to="/solicitar-explicador">
               <CardFooter>
-                <Button className="w-full  hover:scale-90 transition-all">
-                  Solicitar Explicador
-                </Button>
+                  <Button className="w-full hover:scale-90 transition-all">
+                    Solicitar Explicador
+                  </Button>
               </CardFooter>
+                </Link>
             </Card>
 
             <Card className="bg-white shadow-lg hover:shadow-secondary transition-shadow duration-300 border-t-4 border-t-secondary">
@@ -144,11 +148,13 @@ const Services = () => {
                   </li>
                 </ul>
               </CardContent>
+              <Link to="/solicitar-explicador">
               <CardFooter>
-                <Button className="w-full hover:scale-90 transition-all ">
-                  Solicitar Explicador
-                </Button>
+                  <Button className="w-full hover:scale-90 transition-all">
+                    Solicitar Explicador
+                  </Button>
               </CardFooter>
+                </Link>
             </Card>
           </div>
         </div>

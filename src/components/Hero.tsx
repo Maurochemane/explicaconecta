@@ -54,8 +54,7 @@ const Hero = () => {
                   <ArrowRight className="h-4 w-4" />
                 </Button>*/}
 
-                <Link to="/solicitar-explicador">
-                
+                <Link to="/solicitar-explicador">                
                   <Button className="btn-secondary">
                     Encontre um Explicador
                   </Button>
