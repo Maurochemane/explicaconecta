@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -52,9 +53,14 @@ const Hero = () => {
                   Começa Agora
                   <ArrowRight className="h-4 w-4" />
                 </Button>*/}
-                <Button className="btn-secondary">
-                  Encontre um Explicador
-                </Button>
+
+                <Link to="/solicitar-explicador">
+                
+                  <Button className="btn-secondary">
+                    Encontre um Explicador
+                  </Button>
+                </Link>
+
               </div>
             </div>
           </div>
@@ -80,7 +86,7 @@ const Hero = () => {
               ></div>
               <div className="relative bg-gray-50 p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
-                  src="/estudo.jpg"
+                  src="/exp1.jpg"
                   alt="Estudante aprendendo online"
                   className="w-full h-auto rounded-md object-cover"
                 />

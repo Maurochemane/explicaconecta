@@ -142,19 +142,17 @@ const Footer = () => {
 
         {/* Bottom Footer */}
         <div className="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
-          <p>
-            &copy; {currentYear} Explica Conecta. Todos os direitos reservados.
-          </p>
           <div className="mt-4 flex flex-col sm:flex-row justify-center sm:space-x-6">
+          
             <a href="#" className="hover:text-secondary">
-              Termos de Uso
-            </a>
-            <a href="#" className="hover:text-secondary">
-              Política de Privacidade
+              Termos de Uso e Política de Privacidade
             </a>
             <p className="mt-2 sm:mt-0 hover:text-secondary">
               Criado por: Mauro Chemane
             </p>
+          <p>
+            &copy; {currentYear} Explica Conecta. Todos os direitos reservados.
+          </p>
           </div>
         </div>
       </div>
