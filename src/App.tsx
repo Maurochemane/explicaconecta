@@ -10,6 +10,8 @@ import SolicitarExplicador from "./pages/SolicitarExplicador";
 import SolicitarPropostaEmpresas from "./pages/SolicitarPropostaEmpresas";
 import DicasEstudo from "./pages/DicasEstudo";
 
+import ScrollToTop from "./components/ScrollToTop"; // importa aqui
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -18,6 +20,10 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+      
+      <ScrollToTop /> {/* adiciona aqui */}
+    
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route
