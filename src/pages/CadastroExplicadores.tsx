@@ -66,7 +66,7 @@ const CadastroExplicadores = () => {
       description: "Entraremos em contato em breve para continuar o processo.",
     });*/
     try {
-      const res = await fetch("https://SEU_BACKEND.vercel.app/explicadores", {
+      const res = await fetch("https://explicaconectaback-end.vercel.app/.app/explicadores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
