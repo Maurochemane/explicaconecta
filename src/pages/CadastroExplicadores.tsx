@@ -66,7 +66,7 @@ const CadastroExplicadores = () => {
       description: "Entraremos em contato em breve para continuar o processo.",
     });*/
     try {
-      const res = await fetch("https://explicaconectaback-end.onrender.com", {
+      const res = await fetch("https://explicaconectaback-end.onrender.com/explicadores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
