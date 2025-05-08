@@ -59,12 +59,50 @@ const CadastroExplicadores = () => {
     }
     
     // Submit form (would connect to backend in production)
-    console.log("Form submitted:", formData);
+    /*console.log("Form submitted:", formData);
     
     toast({
       title: "Cadastro enviado com sucesso!",
       description: "Entraremos em contato em breve para continuar o processo.",
-    });
+    });*/
+    try {
+      const res = await fetch("https://SEU_BACKEND.vercel.app/explicadores", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+    
+      if (!res.ok) {
+        throw new Error("Erro ao enviar dados");
+      }
+    
+      toast({
+        title: "Cadastro enviado com sucesso!",
+        description: "Entraremos em contato em breve para continuar o processo.",
+      });
+    
+      // Limpar o formulário após o envio
+      setFormData({
+        nome: "",
+        email: "",
+        telefone: "",
+        area: "",
+        niveis: [],
+        disponibilidade: "",
+        experiencia: ""
+      });
+    
+    } catch (err) {
+      console.error(err);
+      toast({
+        title: "Erro ao enviar o cadastro",
+        description: "Tente novamente mais tarde.",
+        variant: "destructive"
+      });
+    }
+    
     
     // Reset form
     setFormData({
