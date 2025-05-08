@@ -49,7 +49,7 @@ const CadastroExplicadores = () => {
     
     
     // Form validation
-    /*if (!formData.nome || !formData.email || !formData.telefone || !formData.area || formData.niveis.length === 0) {
+    if (!formData.nome || !formData.email || !formData.telefone || !formData.area || formData.niveis.length === 0) {
       toast({
         title: "Formulário incompleto",
         description: "Por favor, preencha todos os campos obrigatórios.",
@@ -76,66 +76,7 @@ const CadastroExplicadores = () => {
       disponibilidade: "",
       experiencia: ""
     });
-  };*/
-
-  // Validação do formulário
-  if (
-    !formData.nome ||
-    !formData.email ||
-    !formData.telefone ||
-    !formData.area ||
-    formData.niveis.length === 0
-  ) {
-    toast({
-      title: "Formulário incompleto",
-      description: "Por favor, preencha todos os campos obrigatórios.",
-      variant: "destructive",
-    });
-    return;
-  }
-
-  try {
-    const resposta = await fetch(`${import.meta.env.VITE_API_URL}/api/inscricao`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    });
-
-    const resultado = await resposta.json();
-
-    if (resposta.ok) {
-      toast({
-        title: "Cadastro enviado com sucesso!",
-        description: resultado.mensagem || "Entraremos em contato em breve.",
-      });
-
-      // Limpar o formulário
-      setFormData({
-        nome: "",
-        email: "",
-        telefone: "",
-        area: "",
-        niveis: [],
-        disponibilidade: "",
-        experiencia: "",
-      });
-    } else {
-      toast({
-        title: "Erro ao enviar",
-        description: resultado.mensagem || "Ocorreu um erro ao submeter o formulário.",
-        variant: "destructive",
-      });
-    }
-  } catch (error) {
-    toast({
-      title: "Erro de rede",
-      description: "Não foi possível enviar os dados. Verifique a sua ligação à internet.",
-      variant: "destructive",
-    });
-  }
-};
+  };
 
   return (
     <div className="min-h-screen flex flex-col">
