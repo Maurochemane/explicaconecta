@@ -43,8 +43,14 @@ const CadastroExplicadores = () => {
     });
   };
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  e.preventDefault();
+
+  if (isSubmitting) return; // evita múltiplos envios
+
+  setIsSubmitting(true); // ativa o estado de envio
 
     
     
@@ -102,7 +108,9 @@ const CadastroExplicadores = () => {
         variant: "destructive"
       });
     }
-    
+      finally {
+    setIsSubmitting(false); // sempre libera o botão no final
+  }
     
     // Reset form
     setFormData({
@@ -304,10 +312,12 @@ const CadastroExplicadores = () => {
                   </div>
 
                   <div className="form-group">
-                    <Button type="submit" className="btn-primary w-full">
-                      Submeter
-                    </Button>
+                    <Button type="submit" className="btn-primary w-full" disabled={isSubmitting}>
+                    {isSubmitting ? "Enviando..." : "Submeter"}
+                  </Button>
+
                   </div>
+                  
                   
                   <p className="text-sm text-gray-500 text-center">
                     Campos obrigatórios
