@@ -14,11 +14,11 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className=" bg-blue-50 pt-28 pb-8 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
+      className=" bg-blue-50 pt-28 pb-8 md:pt- md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
     >
       <div className="container mx-auto">
         <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="lg:w-1/2 mb-12 lg:mb-0">
+          <div className="lg:w-1/2 mb-12 lg:mb-12">
             <div className="space-y-6">
               <h1
                 className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight transition-all duration-700 transform ${
@@ -83,7 +83,7 @@ const Hero = () => {
                   isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
                 }`}
               ></div>
-              <div className="relative bg-gray-50 p-4 rounded-md shadow-lg border border-gray-100 overflow-hidden">
+              <div className="relative bg-gray-50 p-0 rounded-md shadow-lg border border-gray-100 overflow-hidden">
                 <img
                   src="/exp1.jpg"
                   alt="Estudante aprendendo online"

@@ -20,7 +20,7 @@ const Footer = () => {
               </span>
             </div>
             <p className="text-gray-400 mb-6">
-              Centro de explicações a domicílio em Maputo e Matola, dedicado a
+              Centro de explicações ao domicílio em Maputo e Matola, dedicado a
               conectar alunos e empresas com os melhores explicadores.
             </p>
           </div>
@@ -117,7 +117,7 @@ const Footer = () => {
             <ul className="space-y-2 text-gray-400">
               <li className="flex items-start">
                 <span className="font-medium w-24">WhatsApp:</span>
-                <span>+258 865968106</span>
+                <span>+258 834220281</span>
               </li>
               <li className="flex items-start">
                 <span className="font-medium w-24 overflow-x-auto">Email:</span>
@@ -147,12 +147,12 @@ const Footer = () => {
             <a href="#" className="hover:text-secondary">
               Termos de Uso e Política de Privacidade
             </a>
-            <p className="mt-2 sm:mt-0 hover:text-secondary">
-              Criado por: Mauro Chemane
-            </p>
           <p>
             &copy; {currentYear} Explica Conecta. Todos os direitos reservados.
           </p>
+            <p className="mt-2 sm:mt-0 hover:text-secondary">
+            
+            </p>
           </div>
         </div>
       </div>
