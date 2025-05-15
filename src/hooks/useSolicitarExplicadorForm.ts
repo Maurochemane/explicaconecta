@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 
@@ -47,6 +46,8 @@ export const useSolicitarExplicadorForm = () => {
     tipoExplicacao: "",
     disciplinas: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false); // <- Estado novo
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -97,13 +98,11 @@ export const useSolicitarExplicadorForm = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Form validation
+
     let isValid = true;
-    
-    // Check if at least one student has name
+
     if (!formData.alunos.some(aluno => aluno.nome.trim() !== "")) {
       toast({
         title: "Dados incompletos",
@@ -112,8 +111,7 @@ export const useSolicitarExplicadorForm = () => {
       });
       isValid = false;
     }
-    
-    // Check other required fields
+
     if (!formData.endereco || !formData.tipoExplicacao) {
       toast({
         title: "Formulário incompleto",
@@ -123,8 +121,7 @@ export const useSolicitarExplicadorForm = () => {
       isValid = false;
     }
 
-    // Check if at least one day is selected
-    const hasDaySelected = Object.values(formData.diasDisponiveis).some(day => day);
+    const hasDaySelected = Object.values(formData.diasDisponiveis).some(Boolean);
     if (!hasDaySelected) {
       toast({
         title: "Disponibilidade não selecionada",
@@ -133,40 +130,64 @@ export const useSolicitarExplicadorForm = () => {
       });
       isValid = false;
     }
-    
+
     if (!isValid) return;
-    
-    // Submit form (would connect to backend in production)
-    console.log("Form submitted:", formData);
-    
-    toast({
-      title: "Solicitação enviada com sucesso!",
-      description: "Entraremos em contato em breve para agendar sua primeira aula.",
-    });
-    
-    // Reset form
-    setFormData({
-      nomeEncarregado: "",
-      alunos: [{ nome: "", idade: "" }],
-      endereco: "",
-      disponibilidade: "",
-      diasDisponiveis: {
-        segunda: false,
-        terca: false,
-        quarta: false,
-        quinta: false,
-        sexta: false,
-        sabado: false,
-        domingo: false
-      },
-      horarioDisponivel: "",
-      tipoExplicacao: "",
-      disciplinas: "",
-    });
+
+    try {
+      setIsSubmitting(true); // <- Início do envio
+      toast({ title: "Enviando seus dados..." });
+
+      const response = await fetch("https://explicaconectaback-end.onrender.com/solicitar-explicador", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Erro ao enviar solicitação.");
+      }
+
+      toast({
+        title: "Solicitação enviada com sucesso!",
+        description: "Entraremos em contato em breve para agendar sua primeira aula.",
+      });
+
+      setFormData({
+        nomeEncarregado: "",
+        alunos: [{ nome: "", idade: "" }],
+        endereco: "",
+        disponibilidade: "",
+        diasDisponiveis: {
+          segunda: false,
+          terca: false,
+          quarta: false,
+          quinta: false,
+          sexta: false,
+          sabado: false,
+          domingo: false
+        },
+        horarioDisponivel: "",
+        tipoExplicacao: "",
+        disciplinas: "",
+      });
+    } catch (error: any) {
+      console.error("Erro ao enviar formulário:", error);
+      toast({
+        title: "Erro ao enviar solicitação",
+        description: error.message || "Ocorreu um erro inesperado.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false); // <- Finaliza envio
+    }
   };
 
   return {
     formData,
+    isSubmitting,
     handleChange,
     handleCheckboxChange,
     handleAlunoChange,

@@ -11,14 +11,14 @@ const DadosDisciplinas = ({ value, onChange }: DadosDisciplinasProps) => {
     <div className="form-group">
       <label htmlFor="disciplinas" className="form-label flex items-center">
         <Book className="w-4 h-4 mr-2 text-primary" />
-        Disciplina(s)*
+        Disciplina(s) e Contactos
       </label>
       <textarea
         id="disciplinas"
         name="disciplinas"
         value={value}
         onChange={onChange}
-        placeholder="Liste as disciplinas que precisa de explicação..."
+        placeholder="Liste as disciplinas que precisa de explicação e o número de contacto..."
         className="form-input"
         rows={3}
         required
