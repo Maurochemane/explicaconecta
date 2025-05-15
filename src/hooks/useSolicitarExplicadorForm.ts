@@ -137,7 +137,7 @@ export const useSolicitarExplicadorForm = () => {
       setIsSubmitting(true); // <- Início do envio
       toast({ title: "Enviando seus dados..." });
 
-      const response = await fetch("https://explicaconectaback-end.onrender.com/explicador", {
+      const response = await fetch("https://explicaconectaback-end.onrender.com/solicitar-explicador", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

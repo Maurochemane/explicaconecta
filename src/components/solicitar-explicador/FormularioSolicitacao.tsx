@@ -71,7 +71,7 @@ const FormularioSolicitacao = ({
         <SubmitButton />
         
         <p className="text-sm text-gray-500 text-center">
-          *Campos obrigatórios
+          Campos obrigatórios
         </p>
       </div>
     </form>
