@@ -1,25 +1,25 @@
+import { PhoneCall } from "lucide-react";
 
-import { MapPin } from "lucide-react";
 
-type DadosEnderecoProps = {
+type DadosContactoProps = {
   value: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 };
 
-const DadosEndereco = ({ value, onChange }: DadosEnderecoProps) => {
+const DadosContacto = ({ value, onChange }: DadosContactoProps) => {
   return (
     <div className="form-group">
       <label htmlFor="endereco" className="form-label flex items-center">
-        <MapPin className="w-4 h-4 mr-2 text-primary" />
-        Endereço*
+        <PhoneCall  className="w-4 h-4 mr-2 text-primary" />
+        Contacto*
       </label>
       <input
         type="text"
-        id="endereco"
-        name="endereco"
+        id="contacto"
+        name="contacto"
         value={value}
         onChange={onChange}
-        placeholder="Localização para as aulas"
+        placeholder="Digita um contacto válido"
         className="form-input"
         required
       />
@@ -29,4 +29,4 @@ const DadosEndereco = ({ value, onChange }: DadosEnderecoProps) => {
   );
 };
 
-export default DadosEndereco;
+export default DadosContacto;

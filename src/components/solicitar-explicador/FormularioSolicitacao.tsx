@@ -3,6 +3,7 @@ import { FormDataType } from "@/hooks/useSolicitarExplicadorForm";
 import DadosEncarregado from "./DadosEncarregado";
 import DadosAlunos from "./DadosAlunos";
 import DadosEndereco from "./DadosEndereco";
+import DadosContacto from "./DadosContacto";
 import DisponibilidadeSemanal from "./DisponibilidadeSemanal";
 import HorarioDisponivel from "./HorarioDisponivel";
 import TipoExplicacao from "./TipoExplicacao";
@@ -45,6 +46,11 @@ const FormularioSolicitacao = ({
 
         <DadosEndereco 
           value={formData.endereco} 
+          onChange={handleChange} 
+        />
+
+        <DadosContacto 
+          value={formData.contacto} 
           onChange={handleChange} 
         />
 

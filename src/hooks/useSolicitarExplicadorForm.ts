@@ -20,6 +20,7 @@ export type FormDataType = {
   nomeEncarregado: string;
   alunos: AlunoType[];
   endereco: string;
+  contacto: string;
   disponibilidade: string;
   diasDisponiveis: DiasDisponiveisType;
   horarioDisponivel: string;
@@ -32,6 +33,7 @@ export const useSolicitarExplicadorForm = () => {
     nomeEncarregado: "",
     alunos: [{ nome: "", idade: "" }],
     endereco: "",
+    contacto: "",
     disponibilidade: "",
     diasDisponiveis: {
       segunda: false,
@@ -159,6 +161,7 @@ export const useSolicitarExplicadorForm = () => {
         nomeEncarregado: "",
         alunos: [{ nome: "", idade: "" }],
         endereco: "",
+        contacto: "",
         disponibilidade: "",
         diasDisponiveis: {
           segunda: false,
