@@ -11,7 +11,7 @@ const DadosContacto = ({ value, onChange }: DadosContactoProps) => {
     <div className="form-group">
       <label htmlFor="endereco" className="form-label flex items-center">
         <PhoneCall  className="w-4 h-4 mr-2 text-primary" />
-        Contacto*
+        Número de telefone
       </label>
       <input
         type="text"
@@ -19,7 +19,7 @@ const DadosContacto = ({ value, onChange }: DadosContactoProps) => {
         name="contacto"
         value={value}
         onChange={onChange}
-        placeholder="Digita um contacto válido"
+        placeholder="84 000 0000 / 86 000 0000"
         className="form-input"
         required
       />

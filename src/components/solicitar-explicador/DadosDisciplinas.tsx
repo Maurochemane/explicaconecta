@@ -18,7 +18,7 @@ const DadosDisciplinas = ({ value, onChange }: DadosDisciplinasProps) => {
         name="disciplinas"
         value={value}
         onChange={onChange}
-        placeholder="Liste as disciplinas que precisa de explicação e o número de contacto..."
+        placeholder="Liste as disciplinas que precisa de explicação"
         className="form-input"
         rows={3}
         required
