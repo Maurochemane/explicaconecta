@@ -13,7 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-User-agent: *
-Disallow:
 
-Sitemap: https://www.explicaconecta.com/sitemap.xml
