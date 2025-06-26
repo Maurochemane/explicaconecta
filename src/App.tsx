@@ -9,6 +9,7 @@ import CadastroExplicadores from "./pages/CadastroExplicadores";
 import SolicitarExplicador from "./pages/SolicitarExplicador";
 import SolicitarPropostaEmpresas from "./pages/SolicitarPropostaEmpresas";
 import DicasEstudo from "./pages/DicasEstudo";
+import Exercicios from "./pages/exercicios";
 
 import ScrollToTop from "./components/ScrollToTop"; // importa aqui
 
@@ -26,6 +27,11 @@ const App = () => (
 
         <Routes>
           <Route path="/" element={<Index />} />
+
+          
+
+          <Route path="/exercicios" element={<Exercicios />} />
+
           <Route
             path="/cadastro-explicadores"
             element={<CadastroExplicadores />}
