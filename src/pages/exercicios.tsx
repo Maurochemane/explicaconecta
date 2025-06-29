@@ -1,82 +1,71 @@
-import React from 'react';
+import React from "react";
 
-export default function PolynomialExercises() {
+const ExerciciosFatoracao: React.FC = () => {
   return (
-    <div className="p-4 space-y-6">
-      <h1 className="text-3xl font-bold mb-4">Cálculos Polinomiais</h1>
+    <div className="p-8 max-w-4xl mx-auto space-y-8 text-lg">
+      <h1 className="text-3xl font-bold text-center">Exercícios Resolvidos: Fatoração e Casos Notáveis</h1>
 
-      {/* Exercício a: Soma e Subtração de Polinómios */}
+      {/* Fatoração por fator comum */}
       <section>
-        <h2 className="text-2xl font-semibold">a) -2P(x) + ½Q(x)</h2>
-        <p className="mb-2">\          Neste exercício, aplicamos a multiplicação escalar aos polinómios e somamos os resultados termo a termo.
-        </p>
-        <p className="whitespace-pre-line font-mono">
-          -2P(x) = -4x⁴ + 6x³ - 2x² + 10x - 2
-          ½Q(x) = 3.5x³ + 0.5x² + 2.5x - 1.5
-          Soma: -4x⁴ + 9.5x³ - 1.5x² + 12.5x - 3.5
-        </p>
+        <h2 className="text-2xl font-semibold">1. Fatoração por Fator Comum</h2>
+        <ul className="list-decimal pl-5 space-y-2">
+          <li><strong>a)</strong> ab − ac² = a(b − c²)</li>
+          <li><strong>b)</strong> 3a²b + 6ab² = 3ab(a + 2b)</li>
+          <li><strong>c)</strong> 8xy − 12yz = 4y(2x − 3z)</li>
+          <li><strong>d)</strong> 14x³y + 21x²y² − 28xy³ = 7xy(2x² + 3xy − 4y²)</li>
+          <li><strong>e)</strong> 4x³ + 8x⁴ − 6x³ + 32x² = 2x²(4x² − x + 16)</li>
+          <li><strong>f)</strong> 3x(x − 2)·x(x − 2) − (x − 2) = (x − 2)(3x²(x − 2) − 1)</li>
+          <li><strong>g)</strong> 12ax³ − 18a²c² + 24ac³ = 6ac(2x² − 3a + 4c²)</li>
+          <li><strong>h)</strong> x(a − b) + y(a + b) (não fatorizável com métodos básicos)</li>
+          <li><strong>i)</strong> (x + y)x² − y(x + y) = (x + y)(x² − y)</li>
+          <li><strong>j)</strong> (a + 1)x + (a + 1) = (a + 1)(x + 1)</li>
+          <li><strong>k)</strong> (x + 1)² + 2(x + 1) = (x + 1)(x + 3)</li>
+        </ul>
       </section>
 
-      {/* Exercício b: Multiplicação de Polinómios */}
+      {/* Desenvolvimento de Binómios */}
       <section>
-        <h2 className="text-2xl font-semibold">b) HR(x) ⋅ P(x)</h2>
-        <p className="mb-2">
-          Multiplicamos o polinómio R(x) por uma constante H = 4 e depois aplicamos a distributiva com P(x).
-        </p>
-        <p className="whitespace-pre-line font-mono">
-          HR(x) = x⁴ + 20x² - 40
-          P(x) = 2x⁴ - 3x³ + x² - 5x + 1
-          Produto: 2x⁸ - 3x⁷ + 41x⁶ - 65x⁵ - 59x⁴ + 20x³ - 20x² + 200x - 40
-        </p>
+        <h2 className="text-2xl font-semibold">2. Desenvolvimento de Binómios (Casos Notáveis)</h2>
+        <ul className="list-decimal pl-5 space-y-2">
+          <li><strong>1-a)</strong> (2 + a)² = 4 + 4a + a²</li>
+          <li><strong>1-b)</strong> (x + 2y)² = x² + 4xy + 4y²</li>
+          <li><strong>1-c)</strong> (2a²b)² = 4a⁴b²</li>
+          <li><strong>1-d)</strong> (−xy − y)² = x²y² + 2xy² + y²</li>
+          <li><strong>1-e)</strong> (3x − 2y)² = 9x² − 12xy + 4y²</li>
+          <li><strong>1-f)</strong> (½ab + ⅓a)² = ¼a²b² + ⅓a²b + 1/9a²</li>
+        </ul>
       </section>
 
-      {/* Fatorações */}
+      {/* Cálculo Rápido com Diferença de Quadrados */}
       <section>
-        <h2 className="text-3xl font-bold">Fatorações</h2>
-
-        <div className="space-y-4">
-          <div>
-            <p><strong>a)</strong> (x² - 2x)² = x²(x - 2)²</p>
-            <p className="text-sm text-gray-600">Aplicação do quadrado perfeito e fator comum.</p>
-          </div>
-          <div>
-            <p><strong>b)</strong> 10xyz + 8xyz² - 3xyz = xyz(8z + 7)</p>
-            <p className="text-sm text-gray-600">Fatoração por termo comum.</p>
-          </div>
-          <div>
-            <p><strong>c)</strong> (x - 1)² - 81 = (x - 10)(x + 8)</p>
-            <p className="text-sm text-gray-600">Diferença de quadrados.</p>
-          </div>
-          <div>
-            <p><strong>d)</strong> 4x² + 12x + 9x = x(4x + 21)</p>
-            <p className="text-sm text-gray-600">Fator comum após soma de termos semelhantes.</p>
-          </div>
-          <div>
-            <p><strong>e)</strong> 2(x + 2) + (3/2)(x + 2)² = (x + 2)(3/2x + 5)</p>
-            <p className="text-sm text-gray-600">Fator comum e distributiva.</p>
-          </div>
-        </div>
+        <h2 className="text-2xl font-semibold">3. Cálculo com Diferença de Quadrados</h2>
+        <ul className="list-decimal pl-5 space-y-2">
+          <li><strong>3-c)</strong> 89² = (90 − 1)² = 8100 − 180 + 1 = 7921</li>
+          <li><strong>3-d)</strong> 19² = (20 − 1)² = 400 − 40 + 1 = 361</li>
+          <li><strong>3-e)</strong> 95×105 = (100 − 5)(100 + 5) = 10000 − 25 = 9975</li>
+          <li><strong>3-f)</strong> 102² = (100 + 2)² = 10000 + 400 + 4 = 10404</li>
+          <li><strong>3-g)</strong> 999² = (1000 − 1)² = 1000000 − 2000 + 1 = 998001</li>
+          <li><strong>3-h)</strong> 998×1002 = (1000 − 2)(1000 + 2) = 1000000 − 4 = 999996</li>
+          <li><strong>3-i)</strong> 12³ − 11² = 1728 − 121 = 1607</li>
+        </ul>
       </section>
 
-      {/* Resolução de Equações */}
+      {/* Casos Notáveis: Expressões Algébricas */}
       <section>
-        <h2 className="text-3xl font-bold">Resolução de Equações</h2>
-
-        <div className="space-y-4">
-          <div>
-            <p><strong>a)</strong> (2x - 1)² = 2x(x + 3) → 2x² - 10x + 1 = 0</p>
-            <p className="text-sm text-gray-600">Expandimos os dois lados e igualamos.</p>
-          </div>
-          <div>
-            <p><strong>b)</strong> (x + 4)² + (x + 1)(x - 4) = 20 → 2x² + 5x - 8 = 0</p>
-            <p className="text-sm text-gray-600">Expandimos e organizamos os termos.</p>
-          </div>
-          <div>
-            <p><strong>c)</strong> x - 3 + 2(x - 2) = 3(x - 2)(x - 3) → 3x² - 18x + 25 = 0</p>
-            <p className="text-sm text-gray-600">Lado esquerdo reduzido e lado direito expandido.</p>
-          </div>
-        </div>
+        <h2 className="text-2xl font-semibold">4. Casos Notáveis em Expressões Algébricas</h2>
+        <ul className="list-decimal pl-5 space-y-2">
+          <li><strong>4-a)</strong> x² + 6x + q = (x + 3)² (se q = 9)</li>
+          <li><strong>4-b)</strong> a² − 4 = (a − 2)(a + 2)</li>
+          <li><strong>4-c)</strong> 4x² − 2xy + y² = (2x − y)²</li>
+          <li><strong>4-d)</strong> a² (já fatorizado)</li>
+        </ul>
       </section>
+
+      
     </div>
+    
   );
-}
+};
+
+export default ExerciciosFatoracao;
+
