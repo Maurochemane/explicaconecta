@@ -10,6 +10,8 @@ import SolicitarExplicador from "./pages/SolicitarExplicador";
 import SolicitarPropostaEmpresas from "./pages/SolicitarPropostaEmpresas";
 import DicasEstudo from "./pages/DicasEstudo";
 import Exercicios from "./pages/exercicios";
+import Contact from "./components/Contact";
+import About from "./components/About";
 
 import ScrollToTop from "./components/ScrollToTop"; // importa aqui
 
@@ -26,11 +28,18 @@ const App = () => (
     
 
         <Routes>
-          <Route path="/" element={<Index />} />
+          <Route path="/" 
+          element={<Index />} />
 
+          <Route path ="/contact"
+          element={<Contact/>} />
+
+          <Route path="/about"
+          element={<About/>}/>
           
 
-          <Route path="/exercicios" element={<Exercicios />} />
+          <Route path="/exercicios" 
+          element={<Exercicios />} />
 
           <Route
             path="/cadastro-explicadores"

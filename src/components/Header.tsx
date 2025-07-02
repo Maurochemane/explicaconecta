@@ -143,7 +143,7 @@ const Header = () => {
                 </div>
               </Link>
               <Link
-                to="/#about"
+                to="/about"
                 className="font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -153,7 +153,7 @@ const Header = () => {
                 </div>
               </Link>
               <Link
-                to="/#tips"
+                to="/dicas-estudo"
                 className="font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -163,7 +163,7 @@ const Header = () => {
                 </div>
               </Link>
               <Link
-                to="/#contact"
+                to="/contact"
                 className="font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -173,37 +173,6 @@ const Header = () => {
                 </div>
               </Link>
 
-              {/* Services Dropdown (Mobile) */}
-              <div>
-                <button
-                  className="flex items-center w-full text-left font-medium hover:text-primary transition-colors"
-                  onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-                >
-                  Serviços <ChevronDown className="ml-1 h-4 w-4" />
-                </button>
-
-                {servicesDropdownOpen && (
-                  <div className="mt-2 ml-6 flex flex-col space-y-2">
-                    <Link
-                      to="/#services-individual"
-                      className="flex items-center font-medium hover:text-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <GraduationCap className="h-4 w-4 mr-2 text-primary" />
-                      <span>Pacotes Singulares</span>
-                    </Link>
-                    <Link
-                      to="/#services-business"
-                      className="flex items-center font-medium hover:text-primary transition-colors"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <Briefcase className="h-4 w-4 mr-2 text-primary" />
-                      <span>Pacotes Empresas</span>
-                    </Link>
-                  </div>
-                )}
-              </div>
-
               <Link
                 to="/cadastro-explicadores"
                 className="font-medium hover:text-primary transition-colors"
@@ -211,7 +180,7 @@ const Header = () => {
               >
                 <div className="flex items-center">
                   <UserPlus className="mr-2 h-4 w-4" />
-                  Área de Explicador
+                  Cadastrar-se como explicador
                 </div>
               </Link>
 
@@ -225,32 +194,7 @@ const Header = () => {
                 </Button>
               </Link>
 
-              <div className="pt-2 border-t border-gray-100">
-                <Link
-                  to="/solicitar-explicador"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full mb-2 flex items-center justify-center gap-2"
-                  >
-                    <Search className="h-4 w-4" />
-                    Solicitar Explicador
-                  </Button>
-                </Link>
-                <Link
-                  to="/solicitar-proposta-empresas"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  <Button
-                    variant="outline"
-                    className="w-full flex items-center justify-center gap-2"
-                  >
-                    <Briefcase className="h-4 w-4" />
-                    Proposta para Empresas
-                  </Button>
-                </Link>
-              </div>
+              
             </div>
           </nav>
         )}
