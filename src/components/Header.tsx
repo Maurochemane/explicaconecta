@@ -17,7 +17,6 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [servicesDropdownOpen, setServicesDropdownOpen] = useState(false);
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-blue-50 shadow-xl z-50">
@@ -41,7 +40,7 @@ const Header = () => {
               Início
             </Link>
             <Link
-              to="/#about"
+              to="/about"
               className=" relative group font-medium text-blue-900"
             >
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
@@ -55,51 +54,20 @@ const Header = () => {
               Dicas
             </Link>
             <Link
-              to="/#Contact"
+              to="/Contact"
               className="relative group font-medium text-blue-900"
             >
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
               Contacto
             </Link>
 
-            {/* Services Dropdown */}
-            <div className="relative">
-              <button
-                className=" relative group font-medium text-blue-900 flex items-center"
-                onClick={() => setServicesDropdownOpen(!servicesDropdownOpen)}
-              >
-                <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-                Serviços <ChevronDown className="ml-1 h-4 w-4" />
-              </button>
-
-              {servicesDropdownOpen && (
-                <div className="absolute top-full left-0 mt-2 w-56 bg-white shadow-lg rounded-md overflow-hidden z-20">
-                  <Link
-                    to="/#services-individual"
-                    className="flex items-center px-4 py-3 hover:bg-gray-100 transition-colors"
-                    onClick={() => setServicesDropdownOpen(false)}
-                  >
-                    <GraduationCap className="h-4 w-4 mr-2 text-primary" />
-                    <span>Pacotes Singulares</span>
-                  </Link>
-                  <Link
-                    to="/#services-business"
-                    className="flex items-center px-4 py-3 hover:bg-gray-100 transition-colors"
-                    onClick={() => setServicesDropdownOpen(false)}
-                  >
-                    <Briefcase className="h-4 w-4 mr-2 text-primary" />
-                    <span>Pacotes Empresas</span>
-                  </Link>
-                </div>
-              )}
-            </div>
 
             <Link
               to="/cadastro-explicadores"
               className="relative group font-medium text-blue-900"
             >
               <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full"></span>
-              Quer Ser Explicador ?
+              Explicador
             </Link>
           </nav>
 
