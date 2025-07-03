@@ -39,24 +39,30 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/solicitar-explicador"> 
               <button className="bg-primary   text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2 hover:bg-white hover:text-primary hover:border-primary">
-                Começar Agora
-                <ArrowRight className="w-5 h-5" />
+              Começar Agora
+              <ArrowRight className="w-5 h-5" />
               </button>
+              </Link>
               
+              <Link to= "/about">
               <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-semibold py-3 px-6 rounded-lg transition">
                 Saiba Mais
               </button>
+              </Link>
             </div>
           </div>
         </div>
       </div>
       
       {/* Indicador de scroll (opcional) */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+      <div className = "hidden md:block">
+      <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce ">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-2 bg-white mt-2 rounded-full"></div>
         </div>
+      </div>
       </div>
     </section>
   );
