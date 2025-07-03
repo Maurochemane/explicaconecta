@@ -1,102 +1,61 @@
-import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
-import { useEffect, useState } from "react";
+import AutoHeroCarousel from './AutoHeroCarousel';
+import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  const [isLoaded, setIsLoaded] = useState(false);
-
-  useEffect(() => {
-    // Set isLoaded to true after component mounts to trigger animations
-    setIsLoaded(true);
-  }, []);
+  // Imagens locais (colocar na pasta public/images/hero/)
+  const heroImages = [
+    '/hero/Ajudar teu filho sem pressão.jpg',
+    '/hero/fixar.jpg',
+    '/hero/Instagram - saber se precisa de explica.jpg',
+    
+  ];
 
   return (
-    <section
-      id="home"
-      className=" bg-blue-50 pt-28 pb-8 md:pt- md:pb-24 px-4 md:px-8 lg:px-16 xl:px-24   max-w-xs:bg-gradient-to-br from-white to-blue-80"
-    >
-      <div className="container mx-auto">
-        <div className="flex flex-col lg:flex-row items-center justify-between">
-          <div className="lg:w-1/2 mb-12 lg:mb-12">
-            <div className="space-y-6">
-              <h1
-                className={`text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-primary leading-tight transition-all duration-700 transform ${
-                  isLoaded
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-10 opacity-0"
-                }`}
-              >
-                Aprende mais, <br />
-                <span className="text-primary">conectado a quem sabe.</span>
-              </h1>
-              <p
-                className={`text-lg md:text-xl mb-8 text-blue-950 max-w-md transition-all duration-700 delay-300 transform ${
-                  isLoaded
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-10 opacity-0"
-                }`}
-                style={{ transitionDelay: "200ms" }}
-              >
-                Busca dominar as matérias? Conecte-se ao seu potencial máximo
+    <section className="relative h-screen min-h-[600px]">
+      {/* Carousel de fundo */}
+      <AutoHeroCarousel 
+        images={heroImages}
+        interval={6000}
+        transitionDuration={1000}
+        className="h-full"
+      />
+      
+      {/* Conteúdo sobreposto */}
+      <div className="absolute inset-0 flex items-center z-10"> 
+        <div className="container mx-auto px-2  sm:px-6 lg:px-8">
+          <div className="max-w-2xl lg:max-w-4xl bg-primary bg-opacity-50 backdrop-blur-sm p-8  rounded-xl text-white">
+            <span className="inline-block px-3 py-1 bg-primary text-sm font-semibold mb-4 rounded-full">
+              Promoção julho
+            </span>
+            
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight  text-white mb-4">
+              Aprende mais <span className="text-secondary">conectado </span>a quem sabe
+            </h1>
+            
+            <p className="text-lg md:text-xl mb-8 opacity-90">
+              Busca dominar as matérias? Conecte-se ao seu potencial máximo
                 com os nossos explicadores qualificados em Maputo e Matola.
-              </p>
-              <div
-                className={`flex flex-col sm:flex-row gap-4 transition-all duration-700 delay-500 transform ${
-                  isLoaded
-                    ? "translate-y-0 opacity-100"
-                    : "translate-y-10 opacity-0"
-                }`}
-                style={{ transitionDelay: "400ms" }}
-              >
-                {/*<Button className="btn-primary flex items-center gap-2">
-                  Começa Agora
-                  <ArrowRight className="h-4 w-4" />
-                </Button>*/}
-
-                <Link to="/solicitar-explicador">                
-                  <Button className="btn-secondary">
-                    Encontre um Explicador
-                  </Button>
-                </Link>
-
-              </div>
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-primary   text-white font-semibold py-3 px-6 rounded-lg transition flex items-center justify-center gap-2 hover:bg-white hover:text-primary hover:border-primary">
+                Começar Agora
+                <ArrowRight className="w-5 h-5" />
+              </button>
+              
+              <button className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-semibold py-3 px-6 rounded-lg transition">
+                Saiba Mais
+              </button>
             </div>
           </div>
-
-          <div
-            className={`lg:w-1/2 transition-all duration-1000 delay-700 transform ${
-              isLoaded
-                ? "translate-x-0 opacity-100"
-                : "translate-x-20 opacity-0"
-            }`}
-            style={{ transitionDelay: "3ms" }}
-          >
-            <div className="relative">
-              <div
-                className={`absolute -top-8 -right-8 w-64 h-64 bg-secondary/20 rounded-full blur-3xl transition-all duration-1000 delay-1000 ${
-                  isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                }`}
-              ></div>
-              <div
-                className={`absolute -bottom-8 -left-8 w-64 h-90 bg-primary/20 rounded-full blur-3xl transition-all duration-1000 delay-1000 ${
-                  isLoaded ? "opacity-100 scale-100" : "opacity-0 scale-50"
-                }`}
-              ></div>
-              <div className="relative bg-gray-50 p-0 rounded-md shadow-lg border border-gray-100 overflow-hidden">
-                <img
-                  src="/exp1.jpg"
-                  alt="Estudante aprendendo online"
-                  className="w-full h-auto rounded-md object-cover"
-                />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-primary/70 to-transparent p-6">
-                  <p className="text-white text-lg font-medium">
-                    Aprenda com os melhores explicadores
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
+        </div>
+      </div>
+      
+      {/* Indicador de scroll (opcional) */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce">
+        <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
+          <div className="w-1 h-2 bg-white mt-2 rounded-full"></div>
         </div>
       </div>
     </section>

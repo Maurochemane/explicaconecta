@@ -20,6 +20,20 @@ body, html {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+
+@theme {
+    --animate-wiggle: wiggle 1s ease-in-out infinit;
+    @keyframes wiggle {
+      0%,
+      100% {
+        transform: rotate(-3deg);
+      }
+      50%{
+        transform: rotate (-3deg);
+      }
+    }
+  }
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

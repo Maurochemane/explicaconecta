@@ -26,12 +26,12 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				primary: {
-					DEFAULT: '#0033ff', // Primary blue
+					DEFAULT: '#004584', // Primary blue
 					foreground: 'white'
 				},
 				secondary: {
-					DEFAULT: '#06fde9', // Secondary vibrant teal
-					foreground: '#0033ff'
+					DEFAULT: '#06fde9', // Secondary vibrant blue teal
+					foreground: 'white'
 				},
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
