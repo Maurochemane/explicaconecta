@@ -142,6 +142,17 @@ const Header = () => {
               </Link>
 
               <Link
+                to="/exercicios"
+                className="font-medium hover:text-primary transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <div className="flex items-center">
+                  <Book className="mr-2 h-4 w-4" />
+                  Trabalhos de casa
+                </div>
+              </Link>
+
+              <Link
                 to="/cadastro-explicadores"
                 className="font-medium hover:text-primary transition-colors"
                 onClick={() => setIsMenuOpen(false)}

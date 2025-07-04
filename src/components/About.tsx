@@ -1,9 +1,12 @@
 import { Check } from "lucide-react";
+import Header from "./Header";
+
 
 const About = () => {
   return (
     <section id="about" className="section-padding bg-white ">
-      <div className="container px-1rem">
+      <Header/>
+      <div className="container mt-10">
         <h2 className="section-title text-primary">Sobre a Explica Conecta</h2>
 
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 mt-12">
@@ -97,6 +100,7 @@ const About = () => {
           </div>
         </div>
       </div>
+    
     </section>
   );
 };

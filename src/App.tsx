@@ -12,6 +12,7 @@ import DicasEstudo from "./pages/DicasEstudo";
 import Exercicios from "./pages/exercicios";
 import Contact from "./components/Contact";
 import About from "./components/About";
+import Solution from "./pages/Solution"
 
 import ScrollToTop from "./components/ScrollToTop"; // importa aqui
 
@@ -40,6 +41,9 @@ const App = () => (
 
           <Route path="/exercicios" 
           element={<Exercicios />} />
+
+          <Route path="/solution" 
+          element={<Solution/>} />
 
           <Route
             path="/cadastro-explicadores"
