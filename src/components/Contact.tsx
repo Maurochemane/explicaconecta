@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
+import Header from "./Header";
 
 const Contact = () => {
   const { toast } = useToast();
@@ -44,11 +45,12 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section-padding bg-white ">
+    <section id="contact" className="section-padding bg-white mt-10">
+      <Header/>
       <div className="container mx-auto">
         <h2 className="section-title text-primary">Entre em Contacto</h2>
-        <p className="section-subtitle text-blue-950">
-          Estamos prontos para responder a todas as suas perguntas e ajudá-lo a
+        <p className="section-subtitle text-blue-950 text-center">
+          Estamos prontos para ajudá-lo a
           começar sua jornada educacional.
         </p>
 

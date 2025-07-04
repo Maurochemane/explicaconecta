@@ -10,8 +10,9 @@ import {
   X,
   UserPlus,
   Briefcase,
-  GraduationCap,
+  NotebookPen,
   Search,
+  EllipsisVertical,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -87,7 +88,7 @@ const Header = () => {
             {isMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6" />
+              <EllipsisVertical className="h-6 w-6" />
             )}
           </button>
         </div>
@@ -147,7 +148,7 @@ const Header = () => {
                 onClick={() => setIsMenuOpen(false)}
               >
                 <div className="flex items-center">
-                  <Book className="mr-2 h-4 w-4" />
+                  <NotebookPen className="mr-2 h-4 w-4" />
                   Trabalhos de casa
                 </div>
               </Link>

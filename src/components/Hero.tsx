@@ -23,9 +23,9 @@ const Hero = () => {
       
       {/* Conteúdo sobreposto */}
       <div className="absolute inset-0 flex items-center z-10"> 
-        <div className="container mx-auto px-2  sm:px-6 lg:px-8">
-          <div className="max-w-2xl lg:max-w-4xl bg-primary bg-opacity-50 backdrop-blur-sm p-8  rounded-xl text-white">
-            <span className=" mt-10 md:mt-0 inline-block px-3 py-1 bg-primary text-sm font-semibold mb-4 rounded-full">
+        <div className="container mx-auto px-0   md:px-80">
+          <div className="max-w-max lg:max-w-2xl bg-primary bg-opacity-25 md:bg-opacity-60 backdrop-blur-sm p-8  rounded-xl text-white">
+            <span className=" mt-10 md:mt-0 inline-block px-3 py-1 bg-primary text-sm font-semibold mb-0 rounded-full">
               julho
             </span>
             
@@ -58,7 +58,7 @@ const Hero = () => {
       
       {/* Indicador de scroll (opcional) */}
       <div className = "hidden md:block">
-      <div className=" absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10 animate-bounce ">
+      <div className=" absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 animate-bounce ">
         <div className="w-6 h-10 border-2 border-white rounded-full flex justify-center">
           <div className="w-1 h-2 bg-white mt-2 rounded-full"></div>
         </div>
