@@ -102,7 +102,7 @@ const [matematica, setMatematica] = useState(false);
         <p className="font-bold text-primary">Prazo final domingo 06-07-25.</p>
         <p className="font-bold text-primary">16:horas</p>
 
-        <Link to= "/">
+        <Link to= "/solution">
         <button className="  mt-8 bg-transparent border-2 border-primary hover:bg-white hover:text-black text-primary font-semibold py-1 px-6 rounded-lg transition">
           Resolução domingo 16h
         </button>
