@@ -3,28 +3,14 @@ import { ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 
 const Hero = () => {
-  // Imagens locais (colocar na pasta public/images/hero/)
-  const heroImages = [
-    '/hero/Ajudar teu filho sem pressão.jpg',
-    '/hero/fixar.jpg',
-    '/hero/Instagram - saber se precisa de explica.jpg',
-    
-  ];
-
+  
   return (
-    <section className="relative h-screen min-h-[600px]">
-      {/* Carousel de fundo */}
-      <AutoHeroCarousel 
-        images={heroImages}
-        interval={6000}
-        transitionDuration={1000}
-        className="h-full"
-      />
+    <section className=" relative h-screen min-h-[600px] bg-gradient-to-b from-secondary to-primary">
       
       {/* Conteúdo sobreposto */}
-      <div className="absolute inset-0 flex items-center z-10"> 
-        <div className="container mx-auto px-0   md:px-80">
-          <div className="max-w-max lg:max-w-2xl bg-primary bg-opacity-25 md:bg-opacity-60 backdrop-blur-sm p-8  rounded-xl text-white">
+      <div className="absolute inset-0 flex items-center md:max-w-max z-10"> 
+        <div className="container mx-auto px-0 flex md:justify-center ">
+          <div className="max-w-max lg:max-w-2xl bg-primary bg-opacity-25  backdrop-blur-sm p-8  rounded-xl text-white md:bg-black md:max-w-max">
             <span className=" mt-10 md:mt-0 inline-block px-3 py-1 bg-primary text-sm font-semibold mb-0 rounded-full">
               julho
             </span>

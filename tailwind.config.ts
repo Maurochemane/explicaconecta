@@ -1,5 +1,6 @@
 
 import type { Config } from "tailwindcss";
+import { DEFAULT_CIPHERS } from "tls";
 
 export default {
 	darkMode: ["class"],
@@ -33,6 +34,7 @@ export default {
 					DEFAULT: '#06fde9', // Secondary vibrant blue teal
 					foreground: 'white'
 				},
+				
 				destructive: {
 					DEFAULT: 'hsl(var(--destructive))',
 					foreground: 'hsl(var(--destructive-foreground))'

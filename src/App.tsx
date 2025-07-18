@@ -13,7 +13,6 @@ import Exercicios from "./pages/exercicios";
 import Contact from "./components/Contact";
 import About from "./components/About";
 import Solution from "./pages/Solution"
-
 import ScrollToTop from "./components/ScrollToTop"; // importa aqui
 
 const queryClient = new QueryClient();

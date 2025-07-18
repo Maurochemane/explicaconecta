@@ -2,6 +2,7 @@
 import Header from "@/components/Header";
 import { Link } from "react-router-dom";
 import React, { useState } from "react";
+import Footer from "@/components/Footer";
 
 const ExerciciosFatoracao: React.FC = () => {
 const [matematica, setMatematica] = useState(false);
@@ -108,6 +109,10 @@ const [matematica, setMatematica] = useState(false);
         </button>
         </Link>
       </section>
+      <div className="py-0 mx-0">
+      <Footer />
+
+    </div>
     </div>
   );
 }

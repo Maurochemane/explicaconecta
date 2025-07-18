@@ -1,12 +1,13 @@
 import Header from "@/components/Header";
 import React, { useState } from "react";
+import Footer from "@/components/Footer";
 
 
   const ExerciciosFatoracao: React.FC = () => {
   const [mostrarGabarito, setMostrarGabarito] = useState(false);
 
   return (
-    <div className="max-w-4xl mx-auto p-6 space-y-10">
+    <div className=" mx-auto p-0 space-y-10">
       <Header />
 
       <section className="bg-white shadow-md rounded-2xl p-6">
@@ -22,7 +23,7 @@ import React, { useState } from "react";
       </section>
 
       {mostrarGabarito && (
-        <section className="bg-white shadow-md rounded-2xl p-0 md:p-6">
+        <section className="bg-white shadow-md rounded-2xl p-6 md:p-6">
           <h1 className="text-2xl font-bold mb-4 text-primary"> Resolução do teste </h1>
           {/* Gabarito completo mantido aqui */}
           <h2 className="text-lg font-semibold text-gray-700 mt-4">1. Lei do Anulamento do Produto</h2>
@@ -71,6 +72,10 @@ import React, { useState } from "react";
           </ol>
         </section>
       )}
+    <div className="py-0 mx-0">
+      <Footer />
+
+    </div>
     </div>
   );
 }

@@ -4,6 +4,7 @@ import Header from "./Header";
 
 const About = () => {
   return (
+    
     <section id="about" className="section-padding bg-white ">
       <Header/>
       <div className="container mt-10">
@@ -100,8 +101,11 @@ const About = () => {
           </div>
         </div>
       </div>
-    
+      
+
     </section>
+      
+ 
   );
 };
 
