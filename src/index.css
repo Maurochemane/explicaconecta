@@ -52,12 +52,11 @@
   }
 
   body {
-    @apply bg-background text-gray-700;
-    scroll-behavior: smooth;
+    @apply bg-[#0079E7];
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply text-gray-800 font-bold;
+    @apply text-[#004584] font-bold;
   }
 
   .btn-primary {
