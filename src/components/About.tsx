@@ -1,13 +1,24 @@
 import { Check } from "lucide-react";
 import Header from "./Header";
+import { useState, useEffect } from "react";
 
 
 const About = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+    
+      useEffect(() => {
+        setIsLoaded(true);
+      }, []);
+    
   return (
     
-    <section id="about" className="section-padding bg-white ">
+    <section id="about" className="section-padding bg-white"> 
       <Header/>
-      <div className="container mt-10">
+      <div className={`container mt-10 {transition-all duration-700 transform ${
+                  isLoaded
+                    ? "translate-y-0 opacity-100"
+                    : "translate-y-10 opacity-0"
+                }`}>
         <h2 className="section-title text-primary">Sobre a Explica Conecta</h2>
 
         <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-12 mt-12">

@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, User } from "lucide-react";
 
+
 const testimonials = [
   {
     id: 1,
@@ -116,6 +117,7 @@ const Testimonials = () => {
             >
               <ChevronRight className="w-5 h-5 text-gray-600" />
             </button>
+         
           </div>
         </div>
       </div>

@@ -15,6 +15,7 @@ import About from "./components/About";
 import Solution from "./pages/Solution"
 import ScrollToTop from "./components/ScrollToTop"; // importa aqui
 
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -57,7 +58,7 @@ const App = () => (
             element={<SolicitarPropostaEmpresas />}
           />
           <Route path="/dicas-estudo" element={<DicasEstudo />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
